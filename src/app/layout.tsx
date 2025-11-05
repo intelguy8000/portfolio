@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Juan Andrés García | Senior BI Analyst',
-  description: 'Ex-Graphite contractor specializing in SaaS metrics, Power BI, and Looker Studio. 6+ years transforming data into strategic insights.',
+  title: 'andres | Building. Learning. Evolving.',
+  description: 'Data architect transforming complexity into clarity. Currently: GenAI @ Vanderbilt | Ex-Graphite. Building solutions that matter.',
   keywords: [
     'Business Intelligence',
     'Power BI',
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://juanandresgarcia.com',
-    title: 'Juan Andrés García | Senior BI Analyst',
-    description: 'Ex-Graphite contractor specializing in SaaS metrics, Power BI, and Looker Studio.',
-    siteName: 'Juan Andrés García Portfolio',
+    title: 'andres | Building. Learning. Evolving.',
+    description: 'Data architect transforming complexity into clarity. GenAI @ Vanderbilt | Ex-Graphite.',
+    siteName: 'andres',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Juan Andrés García | Senior BI Analyst',
-    description: 'Ex-Graphite contractor specializing in SaaS metrics, Power BI, and Looker Studio.',
+    title: 'andres | Building. Learning. Evolving.',
+    description: 'Data architect transforming complexity into clarity. GenAI @ Vanderbilt | Ex-Graphite.',
     creator: '@juanandresgarcia',
   },
   robots: {
@@ -75,7 +75,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-        <div className="relative min-h-screen bg-[#1a1a1a] text-white">
+        <div className="relative min-h-screen bg-white text-black">
           {children}
         </div>
       </body>

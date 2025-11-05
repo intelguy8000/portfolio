@@ -8,8 +8,7 @@
   }
 
   body {
-    @apply bg-[#1a1a1a] text-white antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-white text-black antialiased;
   }
 
   /* Custom scrollbar */
@@ -18,7 +17,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-[#0a0a0a];
+    @apply bg-gray-100;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -26,71 +25,103 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-[#3ab872];
+    @apply bg-[#38B672];
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-[#42CA80] text-white;
+  }
+
+  ::-moz-selection {
+    @apply bg-[#42CA80] text-white;
   }
 }
 
 @layer utilities {
-  /* Graphite Green Accent */
-  .text-graphite-green {
+  /* Brand Colors - Anthropic Style */
+  .text-brand-green {
     color: #42CA80;
   }
 
-  .border-graphite-green {
-    border-color: #42CA80;
-  }
-
-  .bg-graphite-green {
+  .bg-brand-green {
     background-color: #42CA80;
   }
 
-  /* Minimal Cards */
-  .card-minimal {
-    @apply bg-[#2a2a2a] border border-[#42CA80] rounded-lg;
+  .border-brand-green {
+    border-color: #42CA80;
   }
 
-  .card-minimal-hover {
-    @apply bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg transition-all duration-300 hover:border-[#42CA80];
+  /* Typography */
+  .text-display {
+    @apply font-sans font-bold;
+    letter-spacing: -0.03em;
   }
 
-  /* Gradient text - solo para casos especiales */
-  .gradient-text-graphite {
-    @apply bg-gradient-to-r from-[#42CA80] via-[#3ab872] to-[#42CA80] bg-clip-text text-transparent;
+  /* Buttons - Clean Anthropic Style */
+  .btn-primary {
+    @apply inline-block px-10 py-4 bg-[#42CA80] text-white rounded-lg font-semibold text-base transition-all duration-300 hover:bg-[#38B672] hover:shadow-lg;
   }
 
-  /* Text colors */
-  .text-muted {
-    color: #999;
+  .btn-secondary {
+    @apply inline-block px-10 py-4 bg-black text-white rounded-lg font-semibold text-base transition-all duration-300 hover:bg-gray-900 hover:shadow-lg;
   }
 
-  .text-dim {
-    color: #666;
+  .btn-outline {
+    @apply inline-block px-10 py-4 bg-white text-black border-2 border-black rounded-lg font-semibold text-base transition-all duration-300 hover:bg-black hover:text-white;
   }
 
-  /* Buttons Graphite Style */
-  .btn-graphite {
-    @apply px-6 py-3 bg-[#42CA80] text-[#1a1a1a] rounded-md font-medium transition-all duration-300 hover:bg-[#3ab872];
+  /* Cards - Clean Minimal Style */
+  .card-clean {
+    @apply bg-white border-2 border-gray-200 rounded-xl p-8 transition-all duration-300 hover:border-[#42CA80] hover:shadow-xl;
   }
 
-  .btn-graphite-outline {
-    @apply px-6 py-3 bg-transparent border border-[#42CA80] text-[#42CA80] rounded-md font-medium transition-all duration-300 hover:bg-[#42CA80] hover:text-[#1a1a1a];
+  .card-stat {
+    @apply bg-white border-2 border-gray-200 rounded-xl p-8 text-center transition-all duration-300 hover:border-[#42CA80];
   }
 
-  .btn-graphite-secondary {
-    @apply px-6 py-3 bg-[#2a2a2a] text-white border border-[#3a3a3a] rounded-md font-medium transition-all duration-300 hover:border-[#42CA80];
+  /* Links */
+  .link-clean {
+    @apply text-gray-600 hover:text-[#42CA80] transition-colors duration-200;
   }
 
-  /* Badge Graphite */
-  .badge-graphite {
-    @apply inline-block px-4 py-2 border border-[#42CA80] rounded-full text-[#42CA80] text-sm font-medium;
+  .link-primary {
+    @apply text-[#42CA80] hover:text-[#38B672] font-semibold transition-colors duration-200;
   }
 
-  /* Section backgrounds */
-  .section-dark {
-    @apply bg-[#1a1a1a];
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 md:py-32;
   }
+}
 
-  .section-darker {
-    @apply bg-[#141414];
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out forwards;
 }
