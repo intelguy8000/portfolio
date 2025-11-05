@@ -112,7 +112,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32">
+    <section id="contact" className="py-20 md:py-32 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -122,11 +122,11 @@ export default function Contact() {
         >
           {/* Section Header */}
           <motion.div variants={fadeIn('down', 0.1)} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
-              Get In <span className="gradient-text">Touch</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-mono font-bold text-white mb-4">
+              Get In <span className="text-graphite-green">Touch</span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
-            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-graphite-green mx-auto rounded-full" />
+            <p className="text-[#999] mt-4 max-w-2xl mx-auto">
               Have a project in mind or want to discuss data analytics? Let&apos;s connect!
             </p>
           </motion.div>
@@ -136,16 +136,16 @@ export default function Contact() {
             <motion.div variants={fadeIn('right', 0.2)} className="space-y-8">
               {/* Info Cards */}
               <div className="space-y-4">
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-blue-500 transition-all duration-300">
+                <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl p-6 hover:border-graphite-green transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                      <HiMail className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 bg-graphite-green/20 rounded-lg flex items-center justify-center border border-graphite-green">
+                      <HiMail className="w-6 h-6 text-graphite-green" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-400 mb-1">Email</p>
+                      <p className="text-sm text-[#999] mb-1">Email</p>
                       <a
                         href={`mailto:${personal.email}`}
-                        className="text-white hover:text-blue-400 transition-colors"
+                        className="text-white hover:text-graphite-green transition-colors"
                       >
                         {personal.email}
                       </a>
@@ -153,16 +153,16 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-purple-500 transition-all duration-300">
+                <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl p-6 hover:border-graphite-green transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center">
-                      <HiPhone className="w-6 h-6 text-purple-400" />
+                    <div className="w-12 h-12 bg-graphite-green/20 rounded-lg flex items-center justify-center border border-graphite-green">
+                      <HiPhone className="w-6 h-6 text-graphite-green" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-400 mb-1">Phone</p>
+                      <p className="text-sm text-[#999] mb-1">Phone</p>
                       <a
                         href={`tel:${personal.phone}`}
-                        className="text-white hover:text-purple-400 transition-colors"
+                        className="text-white hover:text-graphite-green transition-colors"
                       >
                         {personal.phone}
                       </a>
@@ -170,13 +170,13 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
+                <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl p-6 hover:border-graphite-green transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center">
-                      <HiLocationMarker className="w-6 h-6 text-green-400" />
+                    <div className="w-12 h-12 bg-graphite-green/20 rounded-lg flex items-center justify-center border border-graphite-green">
+                      <HiLocationMarker className="w-6 h-6 text-graphite-green" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-400 mb-1">Location</p>
+                      <p className="text-sm text-[#999] mb-1">Location</p>
                       <p className="text-white">{personal.location}</p>
                     </div>
                   </div>
@@ -184,14 +184,14 @@ export default function Contact() {
               </div>
 
               {/* Social Links */}
-              <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-xl p-6">
+              <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl p-6">
                 <h3 className="text-white font-semibold mb-4">Connect With Me</h3>
                 <div className="flex gap-4">
                   <a
                     href={personal.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 bg-[#3a3a3a] hover:bg-graphite-green hover:text-[#1a1a1a] rounded-lg flex items-center justify-center text-white transition-all duration-300"
                     aria-label="GitHub"
                   >
                     <FaGithub className="w-6 h-6" />
@@ -200,14 +200,14 @@ export default function Contact() {
                     href={personal.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-blue-600 hover:bg-blue-500 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 bg-[#3a3a3a] hover:bg-graphite-green hover:text-[#1a1a1a] rounded-lg flex items-center justify-center text-white transition-all duration-300"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin className="w-6 h-6" />
                   </a>
                   <a
                     href={`mailto:${personal.email}`}
-                    className="w-12 h-12 bg-purple-600 hover:bg-purple-500 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 bg-[#3a3a3a] hover:bg-graphite-green hover:text-[#1a1a1a] rounded-lg flex items-center justify-center text-white transition-all duration-300"
                     aria-label="Email"
                   >
                     <HiMail className="w-6 h-6" />
@@ -230,9 +230,9 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-slate-800 border ${
-                      errors.name ? 'border-red-500' : 'border-slate-700'
-                    } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors`}
+                    className={`w-full px-4 py-3 bg-[#2a2a2a] border ${
+                      errors.name ? 'border-red-500' : 'border-[#3a3a3a]'
+                    } rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-graphite-green transition-colors`}
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -251,9 +251,9 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-slate-800 border ${
-                      errors.email ? 'border-red-500' : 'border-slate-700'
-                    } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors`}
+                    className={`w-full px-4 py-3 bg-[#2a2a2a] border ${
+                      errors.email ? 'border-red-500' : 'border-[#3a3a3a]'
+                    } rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-graphite-green transition-colors`}
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
@@ -272,9 +272,9 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-slate-800 border ${
-                      errors.subject ? 'border-red-500' : 'border-slate-700'
-                    } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors`}
+                    className={`w-full px-4 py-3 bg-[#2a2a2a] border ${
+                      errors.subject ? 'border-red-500' : 'border-[#3a3a3a]'
+                    } rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-graphite-green transition-colors`}
                     placeholder="What's this about?"
                   />
                   {errors.subject && (
@@ -293,9 +293,9 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className={`w-full px-4 py-3 bg-slate-800 border ${
-                      errors.message ? 'border-red-500' : 'border-slate-700'
-                    } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors resize-none`}
+                    className={`w-full px-4 py-3 bg-[#2a2a2a] border ${
+                      errors.message ? 'border-red-500' : 'border-[#3a3a3a]'
+                    } rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-graphite-green transition-colors resize-none`}
                     placeholder="Tell me about your project..."
                   />
                   {errors.message && (
@@ -307,10 +307,10 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium transition-all duration-300 ${
+                  className={`w-full px-8 py-4 bg-graphite-green hover:bg-[#38B672] text-[#1a1a1a] rounded-lg font-mono font-semibold transition-all duration-300 ${
                     isSubmitting
                       ? 'opacity-50 cursor-not-allowed'
-                      : 'hover:shadow-lg hover:shadow-blue-500/50'
+                      : 'hover:shadow-lg hover:shadow-[#42CA80]/50'
                   }`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -318,7 +318,7 @@ export default function Contact() {
 
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
-                  <div className="flex items-center gap-2 p-4 bg-green-600/20 border border-green-500/50 rounded-lg text-green-400">
+                  <div className="flex items-center gap-2 p-4 bg-graphite-green/20 border border-graphite-green rounded-lg text-graphite-green">
                     <HiCheckCircle className="w-5 h-5" />
                     <span>Message sent successfully!</span>
                   </div>
