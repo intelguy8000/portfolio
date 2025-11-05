@@ -1,0 +1,54 @@
+{
+  "name": "juan-andres-garcia-portfolio",
+  "version": "1.0.0",
+  "description": "Professional BI Analytics Portfolio - Juan Andrés García",
+  "author": "Juan Andrés García <jgarci60@eafit.edu.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "vercel --prod",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "next": "14.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "framer-motion": "^10.16.5",
+    "recharts": "^2.10.3",
+    "react-intersection-observer": "^9.5.3",
+    "react-countup": "^6.5.0",
+    "@emailjs/browser": "^3.11.0",
+    "react-icons": "^4.12.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.3",
+    "@types/react": "18.2.42",
+    "@types/react-dom": "18.2.17",
+    "autoprefixer": "10.4.16",
+    "eslint": "8.55.0",
+    "eslint-config-next": "14.0.3",
+    "postcss": "8.4.32",
+    "tailwindcss": "3.3.6",
+    "typescript": "5.3.2",
+    "@next/bundle-analyzer": "^14.0.3"
+  },
+  "keywords": [
+    "portfolio",
+    "business-intelligence",
+    "data-analytics",
+    "power-bi",
+    "looker-studio",
+    "bigquery",
+    "saas-metrics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelguy8000/portfolio.git"
+  }
+}
