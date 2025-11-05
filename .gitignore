@@ -82,3 +82,8 @@ pids
 # Temporary files
 tmp/
 temp/
+
+# Mockup files
+mockup-*.html
+mockup-*.pdf
+generate-mockup-pdf.js
