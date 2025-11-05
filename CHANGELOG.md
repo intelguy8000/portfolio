@@ -4,6 +4,95 @@ Historial de cambios del portfolio de andres.
 
 ---
 
+## [2.1.0] - Claude-Inspired Features - 2025-01-XX
+
+### 🎨 MAJOR FEATURES - Inspired by Claude.com
+
+**Filosofía:** Implementar elementos de Claude.com para mayor engagement
+**Referencia:** https://claude.com/product/overview
+**Resultado:** Portfolio más interactivo, conversacional y visualmente impactante
+
+### ✨ Added
+
+- **"Ask Andres" CTA Section (NEW)**
+  - Input field grande con "What problem are you up against?"
+  - Botón "Ask Andres →" en verde
+  - Fondo negro elegante
+  - Opens mailto: con pre-filled message
+  - Enter key support
+  - Social links integrados
+  - Reemplaza Contact form tradicional
+
+- **"Types of Work" Section (NEW)**
+  - 3 cards de servicios con iconos animados:
+    - 📊 Data Architecture
+    - 🤖 AI & Machine Learning
+    - 📈 Business Intelligence
+  - Hover effects: scale, rotate, border verde
+  - Tags animados para cada servicio
+  - "See examples →" links
+
+- **Taglines Inspiradoras en Hero**
+  - "Your curiosity's collaborator" (top tagline)
+  - "Where complexity meets clarity" (subtitle)
+  - Animaciones secuenciales (staggered)
+
+- **Micro-animaciones Everywhere**
+  - Hero elements con staggered fade-in
+  - Botones con whileHover effects (scale + translate)
+  - Stats cards con hover lift effect
+  - Smooth transitions en todos los componentes
+
+### 🎯 Changed
+
+- **Estructura de página:**
+  - Antes: Hero → Projects → Contact → Footer
+  - Ahora: Hero → Types of Work → Projects → Ask Andres → Footer
+
+- **Hero section:**
+  - Agregadas 3 líneas de texto con animaciones
+  - CTAs con micro-animaciones
+  - Stats cards con hover effects
+
+- **Contact section:**
+  - Eliminado form tradicional
+  - Reemplazado por "Ask Andres" CTA
+  - Mucho más conversacional y engaging
+
+### 📦 Files
+
+**New:**
+- `src/components/AskAndres.tsx`
+- `src/components/TypesOfWork.tsx`
+
+**Updated:**
+- `src/components/Hero.tsx`
+- `src/app/page.tsx`
+- `src/data/portfolio-content.js`
+
+### 🚀 Performance
+
+- Build time: ~15 segundos
+- Bundle size: 48.4 kB (first load: 132 kB)
+- Lighthouse score: 95+ (estimated)
+- All animations optimized with Framer Motion
+
+### 📝 User Feedback
+
+- "super, vamos bien"
+- "este llamado a la accion es mil veces mejor que un form"
+- "aprendiendo de los mejores (tu)" 😄
+
+### 📝 Commits
+
+```
+[upcoming] - feat: Implement Claude-inspired features (Ask Andres, Types of Work, taglines)
+ef7c797 - docs: Add Claude.com-inspired roadmap and update domain
+869f73d - docs: Add session summary for context preservation
+```
+
+---
+
 ## [2.0.0] - Anthropic Redesign - 2025-01-XX
 
 ### 🎨 COMPLETE REDESIGN

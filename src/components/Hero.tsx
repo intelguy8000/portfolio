@@ -25,40 +25,82 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Brand Name - Huge */}
-          <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold mb-8 tracking-tight">
-            andres
-          </h1>
+          {/* Inspirational Tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg sm:text-xl text-gray-500 mb-6 italic font-light"
+          >
+            {hero.tagline}
+          </motion.p>
 
-          {/* Tagline */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-600 mb-6">
+          {/* Brand Name - Huge */}
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-7xl sm:text-8xl md:text-9xl font-bold mb-8 tracking-tight"
+          >
+            andres
+          </motion.h1>
+
+          {/* Main Tagline */}
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-600 mb-6"
+          >
             Building. Learning. Evolving.
-          </h2>
+          </motion.h2>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-xl sm:text-2xl text-black font-medium max-w-2xl mx-auto mb-8"
+          >
+            {hero.subtitle}
+          </motion.p>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
-            Data architect transforming complexity into clarity.
-          </p>
-
-          <p className="text-base sm:text-lg text-gray-500 mb-12">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-base sm:text-lg text-gray-500 mb-12"
+          >
             Currently: GenAI @ Vanderbilt | Ex-Graphite | 6+ Years Building Solutions
-          </p>
+          </motion.p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-            <button
-              onClick={() => scrollToElement('projects')}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+          >
+            <motion.button
+              onClick={() => scrollToElement('types')}
               className="btn-primary w-full sm:w-auto"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               View Work
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={() => scrollToElement('contact')}
               className="btn-outline w-full sm:w-auto"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               Get in Touch
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </motion.div>
 
         {/* Stats - Single Line */}
@@ -66,13 +108,17 @@ export default function Hero() {
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
         >
           {hero.stats.map((stat, index) => (
-            <div
+            <motion.div
               key={index}
-              className="card-stat"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="card-stat cursor-default"
             >
               <div className="text-4xl md:text-5xl font-bold text-black mb-2">
                 {stat.prefix && <span className="text-brand-green">{stat.prefix}</span>}
@@ -87,7 +133,7 @@ export default function Hero() {
                 )}
               </div>
               <div className="text-sm text-gray-600">{stat.label}</div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

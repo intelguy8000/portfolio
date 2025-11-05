@@ -15,7 +15,9 @@ export const portfolioData = {
 
   // Hero Section
   hero: {
+    tagline: "Your curiosity's collaborator",
     headline: "Transforming Data into Strategic Insights",
+    subtitle: "Where complexity meets clarity",
     description: "Senior Business Intelligence Analyst with 6+ years building data solutions for SaaS and enterprise companies. Recently completed 8-month contract with Graphite (YC-backed) building SaaS metrics infrastructure.",
     stats: [
       { label: "Dashboards Delivered", value: 50, suffix: "+" },
@@ -24,6 +26,28 @@ export const portfolioData = {
       { label: "Years Experience", value: 6, suffix: "+" },
     ],
   },
+
+  // Types of Work
+  typesOfWork: [
+    {
+      icon: "📊",
+      title: "Data Architecture",
+      description: "Building scalable data pipelines and infrastructure that turn raw data into strategic assets.",
+      tags: ["ETL/ELT", "Warehousing", "Analytics"],
+    },
+    {
+      icon: "🤖",
+      title: "AI & Machine Learning",
+      description: "Implementing intelligent solutions that learn, adapt, and deliver measurable business value.",
+      tags: ["NLP", "Predictive", "Automation"],
+    },
+    {
+      icon: "📈",
+      title: "Business Intelligence",
+      description: "Transforming data into actionable insights through interactive dashboards and reports.",
+      tags: ["Dashboards", "Reports", "Insights"],
+    },
+  ],
 
   // About Section
   about: {
