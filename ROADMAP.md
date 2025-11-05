@@ -2,6 +2,162 @@
 
 Plan de mejoras y próximos pasos para el portfolio de andres.
 
+**Nuevo dominio:** https://andres-ai.vercel.app/
+
+---
+
+## 🎨 INSPIRACIÓN CLAUDE.COM - Nueva Visión (PRIORIDAD #1)
+
+**Referencia:** https://claude.com/product/overview
+
+### Ideas Clave Inspiradas en Claude's Product Page:
+
+#### 1. **Hero con Animación/Movimiento** ⭐⭐⭐
+```
+Similar al hero de Claude con ilustraciones animadas
+- Animaciones sutiles pero impactantes
+- SVG animados o Lottie
+- Mantener el estilo minimalista pero agregar vida
+```
+
+**Implementación:**
+- Framer Motion para animaciones avanzadas
+- SVG animados custom
+- Parallax sutil en scroll
+
+#### 2. **Network Visualization - "Todo se Une"** ⭐⭐⭐
+```
+Visualización tipo red/conexiones mostrando:
+"Con claridad, todo es posible conectarlo"
+
+Elementos conectados:
+- Data → Insights
+- Problems → Solutions
+- Ideas → Reality
+- Business Goals → Technical Implementation
+```
+
+**Por qué:** Demuestra visualmente tu rol como "catalyst" - conectas las ideas del cliente con la realidad técnica.
+
+**Tech Stack:**
+- D3.js o Three.js para visualización
+- Canvas API
+- Animated SVG paths
+
+#### 3. **"Ask Andres" CTA - NO Forms!** ⭐⭐⭐
+```
+En lugar de form tradicional:
+
+┌─────────────────────────────────────────┐
+│ What problem are you up against?        │
+│                                          │
+│ [Input field]              [Ask Andres]→│
+└─────────────────────────────────────────┘
+```
+
+**Inspiración directa de "Ask Claude"**
+
+**Implementación:**
+- Single input field (email or simple question)
+- Opens mailto: with pre-filled subject
+- O integración con Calendly/Cal.com para agendar
+- Mucho más engaging que un form largo
+
+#### 4. **"Types of Work" Section - Como "Claude Models"** ⭐⭐⭐
+```
+En lugar de "Claude models" → "Types of Work"
+
+┌─────────────────────────────────────────┐
+│  Data Architecture                       │
+│  ────────────────────────────────────   │
+│  Building scalable data pipelines...    │
+│  • ETL/ELT  • Warehousing  • Analytics  │
+│                                          │
+│  [Learn more →]                          │
+└─────────────────────────────────────────┘
+
+┌─────────────────────────────────────────┐
+│  AI & Machine Learning                   │
+│  ────────────────────────────────────   │
+│  Implementing intelligent solutions...   │
+│  • NLP  • Predictive  • Automation      │
+│                                          │
+│  [Learn more →]                          │
+└─────────────────────────────────────────┘
+
+┌─────────────────────────────────────────┐
+│  Business Intelligence                   │
+│  ────────────────────────────────────   │
+│  Transforming data into decisions...     │
+│  • Dashboards  • Reports  • Insights    │
+│                                          │
+│  [Learn more →]                          │
+└─────────────────────────────────────────┘
+```
+
+**Con iconos animados arriba de cada card** (como la nubecita de Claude)
+
+#### 5. **Frases/Taglines Inspiradoras** ⭐⭐
+```
+Inspirado en frases de Claude:
+
+"Your curiosity's collaborator"
+"There's never been a worse time to be a problem,
+ or a better time to be a problem solver"
+
+Para ti:
+- "Your data's storyteller"
+- "Where complexity meets clarity"
+- "Building bridges between ideas and reality"
+- "Technology that makes sense"
+- "Your catalyst for innovation"
+```
+
+#### 6. **Sección de "Ideas & Possibilities"** ⭐⭐
+```
+En lugar de mostrar solo lo que has hecho,
+mostrar lo que SE PUEDE lograr:
+
+"What We Could Build Together"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[Card 1]                [Card 2]                [Card 3]
+AI-Powered Analytics    Real-Time Dashboards    Data Automation
+Custom ML models...     Live business intel...  Eliminate manual...
+
+[Ver más posibilidades →]
+```
+
+**Por qué:** Inspiracional > Transaccional. Muestra visión, no solo historial.
+
+#### 7. **Micro-Animaciones Everywhere** ⭐
+```
+Como Claude:
+- Iconos que se animan al entrar en viewport
+- Hover effects sutiles
+- Smooth transitions entre secciones
+- Loading states elegantes
+```
+
+---
+
+### 🎯 Plan de Implementación Claude-Inspired
+
+**Fase 1: Fundamentos**
+1. Actualizar Hero con animaciones
+2. Agregar "Ask Andres" CTA
+3. Crear "Types of Work" section
+
+**Fase 2: Visualizaciones**
+4. Network visualization animada
+5. Iconos animados para tech stack
+6. Micro-interactions en toda la página
+
+**Fase 3: Contenido**
+7. Escribir taglines inspiradoras
+8. Crear sección "What We Could Build"
+9. Case studies detallados
+
 ---
 
 ## 🎯 Próxima Sesión - Ideas para Implementar

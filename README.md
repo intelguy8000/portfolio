@@ -4,7 +4,8 @@
 
 Clean, minimal, commercial portfolio inspired by Anthropic's design philosophy. Built to convert visitors into clients in < 30 seconds.
 
-**Live:** https://portfolio-eta-amber-z65kfa5giq.vercel.app/
+**Live:** https://andres-ai.vercel.app/
+**Previous:** https://portfolio-eta-amber-z65kfa5giq.vercel.app/
 
 ---
 
@@ -325,7 +326,7 @@ git commit -m "feat: your change description"
 git push origin main
 
 # Vercel auto-deploys
-# Check: https://portfolio-eta-amber-z65kfa5giq.vercel.app/
+# Check: https://andres-ai.vercel.app/
 ```
 
 ---
@@ -369,6 +370,7 @@ git push origin main
 
 ## 🎯 Design Inspirations
 
+- **Claude.com Product Page:** https://claude.com/product/overview (primary inspiration - animated, engaging)
 - **Anthropic:** https://anthropic.com (clean, professional)
 - **Starlink:** https://starlink.com (visual, bold)
 - **Neuralink:** https://neuralink.com (minimal, luxury)

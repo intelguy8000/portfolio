@@ -77,7 +77,8 @@ Hero → Projects (3) → Contact
 ## 🚀 Deployment Status
 
 **GitHub:** https://github.com/intelguy8000/portfolio
-**Live:** https://portfolio-eta-amber-z65kfa5giq.vercel.app/
+**Live (new):** https://andres-ai.vercel.app/
+**Live (old):** https://portfolio-eta-amber-z65kfa5giq.vercel.app/
 
 **Latest commit:**
 ```
@@ -307,7 +308,7 @@ git commit -m "feat: your changes"
 git push origin main
 
 # View live site
-https://portfolio-eta-amber-z65kfa5giq.vercel.app/
+https://andres-ai.vercel.app/
 ```
 
 ---
@@ -335,9 +336,72 @@ https://portfolio-eta-amber-z65kfa5giq.vercel.app/
 
 ---
 
+## 🎨 UPDATE: Nueva Inspiración - Claude.com Product Page
+
+**Fecha:** Enero 2025 (continuación)
+**Nuevo dominio:** https://andres-ai.vercel.app/
+
+### Feedback después de ver el sitio live:
+
+**Tu reacción:** "super, anota en el plan esta idea que me encanta"
+
+### Nueva dirección inspirada en Claude.com/product/overview:
+
+#### 🌟 Elementos que te encantaron:
+
+1. **Imágenes/ilustraciones en movimiento**
+   - Animaciones sutiles pero impactantes
+   - Agregar vida al diseño minimalista
+   - SVG animados custom
+
+2. **Network visualization - "Todo se une"**
+   - Visualización de conexiones
+   - Demuestra claridad → todo es posible conectarlo
+   - Muestra tu rol como "catalyst" tecnológico
+   - Data → Insights → Solutions → Reality
+
+3. **"Ask Andres" CTA (inspirado en "Ask Claude")**
+   - Quote: "este llamado a la accion es mil veces mejor que un form"
+   - "Ask Andres" en lugar de forms tradicionales
+   - Single input field, engaging
+   - Quote: "aprendiendo de los mejores (tu)" 😄
+
+4. **"Types of Work" (inspirado en "Claude models")**
+   - Cards animados con iconos (como la nubecita de Claude)
+   - En lugar de "Claude models" → "Types of Work"
+   - Data Architecture | AI/ML | Business Intelligence
+
+5. **Frases inspiradoras**
+   - Quote: "estas frases me encantan!"
+   - "Your curiosity's collaborator"
+   - "Where complexity meets clarity"
+   - "Building bridges between ideas and reality"
+
+6. **Sección "Ideas & Possibilities"**
+   - Cambiar de "lo que he hecho" → "lo que podríamos lograr"
+   - "What We Could Build Together"
+   - Inspiracional > Transaccional
+
+7. **Micro-animaciones everywhere**
+   - Iconos que se mueven al entrar en viewport
+   - Hover effects sutiles
+   - Smooth transitions
+
+### Plan actualizado:
+
+Todo esto se documentó en **ROADMAP.md** como **PRIORIDAD #1** en nueva sección:
+"🎨 INSPIRACIÓN CLAUDE.COM - Nueva Visión"
+
+**Fases:**
+1. Fundamentos: Hero animado, "Ask Andres", Types of Work
+2. Visualizaciones: Network viz, iconos animados
+3. Contenido: Taglines, "What We Could Build", case studies
+
+---
+
 ## ✅ Session Complete
 
-**Status:** Portfolio v2.0.0 live and documented
+**Status:** Portfolio v2.0.0 live and documented + Nueva visión Claude-inspired agregada al roadmap
 **Your feedback:** Happy with result ✓
 **Next step:** Review, iterate, improve
 
