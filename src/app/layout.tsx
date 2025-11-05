@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins, Fira_Code } from 'next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
@@ -8,14 +8,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const firaCode = Fira_Code({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
   display: 'swap',
@@ -79,16 +72,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} ${firaCode.variable} font-sans antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-        <div className="relative min-h-screen bg-slate-950 text-white">
-          {/* Background gradient */}
-          <div className="fixed inset-0 -z-10 overflow-hidden">
-            <div className="absolute -top-1/2 -right-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-3xl" />
-            <div className="absolute -bottom-1/2 -left-1/2 w-[1000px] h-[1000px] bg-purple-500/10 rounded-full blur-3xl" />
-          </div>
-
+        <div className="relative min-h-screen bg-[#1a1a1a] text-white">
           {children}
         </div>
       </body>

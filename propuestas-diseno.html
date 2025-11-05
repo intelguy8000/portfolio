@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuestas de Diseño - Portfolio Juan Andrés García</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 0 auto;
+            background: white;
+            page-break-after: always;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #42CA80;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .proposal {
+            margin-bottom: 60px;
+            page-break-inside: avoid;
+        }
+
+        .proposal-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .proposal-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #42CA80;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .proposal-title {
+            flex: 1;
+        }
+
+        .proposal-title h2 {
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .proposal-title .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .features {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .features h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .checkmark {
+            color: #42CA80;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .mockup {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        /* Propuesta 1 - Graphite Clean (Light) */
+        .mockup-1 {
+            background: white;
+            color: #333;
+        }
+
+        .mockup-1 .nav {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mockup-1 .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .mockup-1 .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .mockup-1 .hero {
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .mockup-1 .hero h1 {
+            font-family: 'Courier New', monospace;
+            font-size: 36px;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .mockup-1 .hero h2 {
+            font-size: 28px;
+            color: #42CA80;
+            margin-bottom: 20px;
+        }
+
+        .mockup-1 .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #42CA80;
+            border-radius: 20px;
+            color: #42CA80;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .mockup-1 .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .mockup-1 .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+        }
+
+        .mockup-1 .btn-primary {
+            background: #42CA80;
+            color: white;
+            border: none;
+        }
+
+        .mockup-1 .btn-secondary {
+            background: white;
+            color: #333;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mockup-1 .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 0 30px;
+        }
+
+        .mockup-1 .stat {
+            text-align: center;
+        }
+
+        .mockup-1 .stat-value {
+            font-family: 'Courier New', monospace;
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .mockup-1 .stat-label {
+            font-size: 12px;
+            color: #7C776A;
+            margin-top: 5px;
+        }
+
+        /* Propuesta 2 - Graphite Dark Hybrid */
+        .mockup-2 {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .mockup-2 .nav {
+            background: #1a1a1a;
+            padding: 20px 30px;
+            border-bottom: 1px solid #2a2a2a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mockup-2 .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .mockup-2 .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+            color: #999;
+        }
+
+        .mockup-2 .hero {
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .mockup-2 .hero h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .mockup-2 .hero h2 {
+            font-size: 28px;
+            color: #42CA80;
+            margin-bottom: 20px;
+        }
+
+        .mockup-2 .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #42CA80;
+            border-radius: 20px;
+            color: #42CA80;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .mockup-2 .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 0 30px;
+        }
+
+        .mockup-2 .stat-card {
+            background: #2a2a2a;
+            border: 1px solid #42CA80;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mockup-2 .stat-value {
+            font-family: 'Courier New', monospace;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .mockup-2 .stat-label {
+            font-size: 11px;
+            color: #999;
+        }
+
+        /* Propuesta 3 - Tech Minimal Premium */
+        .mockup-3 {
+            background: #f8f8f8;
+            color: #1a1a1a;
+        }
+
+        .mockup-3 .nav {
+            background: #f8f8f8;
+            padding: 20px 30px;
+            border-bottom: 2px solid #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mockup-3 .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a1a1a;
+            letter-spacing: 2px;
+        }
+
+        .mockup-3 .contact-btn {
+            font-family: 'Courier New', monospace;
+            padding: 10px 20px;
+            border: 2px solid #1a1a1a;
+            background: white;
+            color: #1a1a1a;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .mockup-3 .hero {
+            padding: 60px 30px;
+        }
+
+        .mockup-3 .hero h1 {
+            font-family: 'Courier New', monospace;
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .mockup-3 .hero h2 {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            color: #42CA80;
+            margin-bottom: 15px;
+        }
+
+        .mockup-3 .inline-stats {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .mockup-3 .action-box {
+            border: 3px solid #1a1a1a;
+            border-radius: 8px;
+            padding: 25px;
+            background: white;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .mockup-3 .btn {
+            font-family: 'Courier New', monospace;
+            padding: 12px 24px;
+            border: 2px solid #1a1a1a;
+            background: white;
+            color: #1a1a1a;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .mockup-3 .btn-primary {
+            background: #42CA80;
+            border-color: #42CA80;
+            color: white;
+        }
+
+        .recommendation {
+            background: #e8f5e9;
+            border-left: 4px solid #42CA80;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .recommendation h3 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .recommendation p {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .comparison {
+            margin-top: 30px;
+        }
+
+        .comparison h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+        }
+
+        .comparison-table th {
+            background: #f8f8f8;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 500;
+        }
+
+        .yes { color: #42CA80; font-weight: bold; }
+        .no { color: #999; }
+
+        @media print {
+            .page {
+                margin: 0;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="page">
+        <div class="header">
+            <h1>Propuestas de Diseño</h1>
+            <p>Portfolio Juan Andrés García - Inspirado en Graphite.io</p>
+        </div>
+
+        <!-- Propuesta 1 -->
+        <div class="proposal">
+            <div class="proposal-header">
+                <div class="proposal-number">1</div>
+                <div class="proposal-title">
+                    <h2>Graphite Clean</h2>
+                    <div class="subtitle">Fiel al estilo original de Graphite - Light Mode</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>Características Principales</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Fondo blanco limpio</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Tipografía monoespaciada</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Acento verde #42CA80</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Borders sutiles, sin sombras</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Espaciado generoso</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Animaciones fade-in 300ms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mockup mockup-1">
+                <div class="nav">
+                    <div class="logo">JAG</div>
+                    <div class="nav-links">
+                        <span>About</span>
+                        <span>Experience</span>
+                        <span>Projects</span>
+                        <span>Skills</span>
+                        <span>Contact</span>
+                    </div>
+                </div>
+                <div class="hero">
+                    <div class="badge">Ex-Graphite Contractor | SaaS Metrics Specialist</div>
+                    <h1>Juan Andrés García G.</h1>
+                    <h2>Senior Business Intelligence Analyst</h2>
+                    <p style="color: #7C776A; margin-bottom: 30px; font-size: 15px;">Transforming Data into Strategic Insights</p>
+                    <div class="buttons">
+                        <button class="btn btn-primary">View My Work →</button>
+                        <button class="btn btn-secondary">Download CV</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Dashboards</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">$2M+</div>
+                            <div class="stat-label">Cost Savings</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">500M+</div>
+                            <div class="stat-label">Records</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">6+</div>
+                            <div class="stat-label">Years Exp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+        <!-- Propuesta 2 -->
+        <div class="proposal">
+            <div class="proposal-header">
+                <div class="proposal-number">2</div>
+                <div class="proposal-title">
+                    <h2>Graphite Dark Hybrid</h2>
+                    <div class="subtitle">Dark mode minimalista con acento verde</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>Características Principales</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Dark mode limpio (#1a1a1a)</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Acento verde + azul</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Tipografía mono para títulos</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Cards planas con border verde</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Sin glassmorphism</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Colores sólidos, menos gradientes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mockup mockup-2">
+                <div class="nav">
+                    <div class="logo">JAG</div>
+                    <div class="nav-links">
+                        <span>About</span>
+                        <span>Experience</span>
+                        <span>Projects</span>
+                        <span>Skills</span>
+                        <span>Contact</span>
+                    </div>
+                </div>
+                <div class="hero">
+                    <div class="badge">Ex-Graphite Contractor | SaaS Metrics Specialist</div>
+                    <h1>Juan Andrés García G.</h1>
+                    <h2>Senior Business Intelligence Analyst</h2>
+                    <p style="color: #999; margin-bottom: 40px; font-size: 15px;">Transforming Data into Strategic Insights</p>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Dashboards</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">$2M+</div>
+                            <div class="stat-label">Cost Savings</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">500M+</div>
+                            <div class="stat-label">Records</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">6+</div>
+                            <div class="stat-label">Years</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation">
+                <h3>⭐ Recomendación</h3>
+                <p><strong>Esta es mi propuesta favorita porque:</strong></p>
+                <p style="margin-top: 10px;">
+                    • Mantiene el dark mode actual que ya funciona<br>
+                    • Adopta la limpieza y minimalismo de Graphite<br>
+                    • El verde #42CA80 hace referencia visual a tu experiencia en Graphite<br>
+                    • Es único - pocos portfolios combinan dark minimal tech<br>
+                    • Refleja profesionalismo tech-forward
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page">
+        <!-- Propuesta 3 -->
+        <div class="proposal">
+            <div class="proposal-header">
+                <div class="proposal-number">3</div>
+                <div class="proposal-title">
+                    <h2>Tech Minimal Premium</h2>
+                    <div class="subtitle">Minimalismo extremo con tipografía mono</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>Características Principales</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Fondo gris claro #f8f8f8</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Acento verde + negro</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>100% tipografía monoespaciada</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Grid ultra estructurado</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Stats inline, no cards</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">✓</span>
+                        <span>Todo flat, sin gradientes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mockup mockup-3">
+                <div class="nav">
+                    <div class="logo">JAG</div>
+                    <button class="contact-btn">→ CONTACT</button>
+                </div>
+                <div class="hero">
+                    <h1>JUAN ANDRÉS GARCÍA G.</h1>
+                    <h2>SENIOR BI ANALYST</h2>
+                    <div class="inline-stats">Ex-Graphite (YC) • 6 years • $50M ARR tracked</div>
+                    <div class="action-box">
+                        <button class="btn btn-primary">[View Projects]</button>
+                        <button class="btn">[Download CV]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison">
+            <h3>Tabla Comparativa</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Propuesta 1</th>
+                        <th>Propuesta 2</th>
+                        <th>Propuesta 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dark Mode</td>
+                        <td class="no">No</td>
+                        <td class="yes">Sí</td>
+                        <td class="no">No</td>
+                    </tr>
+                    <tr>
+                        <td>Minimalismo</td>
+                        <td class="yes">Alto</td>
+                        <td class="yes">Medio-Alto</td>
+                        <td class="yes">Extremo</td>
+                    </tr>
+                    <tr>
+                        <td>Acento Verde</td>
+                        <td class="yes">Sí</td>
+                        <td class="yes">Sí</td>
+                        <td class="yes">Sí</td>
+                    </tr>
+                    <tr>
+                        <td>Tipografía Mono</td>
+                        <td class="yes">Sí</td>
+                        <td class="yes">Parcial</td>
+                        <td class="yes">100%</td>
+                    </tr>
+                    <tr>
+                        <td>Contraste Visual</td>
+                        <td>Bajo</td>
+                        <td class="yes">Alto</td>
+                        <td>Medio</td>
+                    </tr>
+                    <tr>
+                        <td>Originalidad</td>
+                        <td>Media</td>
+                        <td class="yes">Alta</td>
+                        <td>Media-Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Tech-Forward</td>
+                        <td class="yes">Sí</td>
+                        <td class="yes">Sí</td>
+                        <td class="yes">Muy Alto</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
